@@ -2,7 +2,7 @@
 
 # grunt-pseudo-concat
 
-> require-esk script includes for debugging files that will be concatenate
+> require-esk script includes for debugging files that will be concatenate. It replaces your compiled script with a file loader, so you don't have to change anything and can debug individual files.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
