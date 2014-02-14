@@ -12,6 +12,28 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    todos: {
+      options: {
+        marks: [
+          {
+            name: "to do:",
+            pattern: /todo\:\s/,
+            color: "yellow"
+          },
+          {
+            name: "might do:",
+            pattern: /todo\?\s/,
+            color: "cyan"
+          }
+        ]
+      },
+      src: [
+        './*',
+        './**/*',
+        '!./Gruntfile.js',
+        '!./node_modules/**/*'
+      ]
+    },
     jshint: {
       all: [
         'Gruntfile.js',
@@ -57,6 +79,9 @@ module.exports = function(grunt) {
 
   // load all tasks
   require('load-grunt-tasks')(grunt);
+  
+  // prevents our task declaration from showing up as a todo
+  grunt.task.renameTask("todo", "todos");
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
