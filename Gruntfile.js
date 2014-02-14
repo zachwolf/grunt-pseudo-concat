@@ -30,7 +30,6 @@ module.exports = function(grunt) {
       src: [
         './*',
         './**/*',
-        '!./Gruntfile.js',
         '!./node_modules/**/*'
       ]
     },
@@ -79,7 +78,7 @@ module.exports = function(grunt) {
 
   // load all tasks
   require('load-grunt-tasks')(grunt);
-  
+
   // prevents our task declaration from showing up as a todo
   grunt.task.renameTask("todo", "todos");
 
