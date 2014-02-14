@@ -8,7 +8,7 @@
 
 - todo: handlebars templating
 - todo: unit tests
-- todo: hoxy rewrite asset path
+- todo: rewrite asset path (possibly with hoxy)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
