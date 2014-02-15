@@ -74,6 +74,13 @@ module.exports = function(grunt) {
       tests: ['test/*_test.js'],
     },
 
+    browserify: {
+      basic: {
+        src: ['browserify-test/client/simple.js'],
+        dest: 'browserify-test/public/main.js'
+      }
+    }
+
   });
 
   // load all tasks
